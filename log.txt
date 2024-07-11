@@ -1,0 +1,696 @@
+
+AJ_ACER@AJ MINGW64 ~
+$ cd c:/
+
+AJ_ACER@AJ MINGW64 /c
+$ cd C:\Projects\Git\gittwo
+bash: cd: C:ProjectsGitgittwo: No such file or directory
+
+AJ_ACER@AJ MINGW64 /c
+$ cd projects
+
+AJ_ACER@AJ MINGW64 /c/projects
+$ cd git
+
+AJ_ACER@AJ MINGW64 /c/projects/git (master)
+$ cd gittwo
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ ls
+index.html  index.htmls
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ la
+bash: la: command not found
+ls -la
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ ls -la
+total 4
+drwxr-xr-x 1 AJ_ACER 197121 0 Jul  9 23:46 ./
+drwxr-xr-x 1 AJ_ACER 197121 0 Jul  9 12:39 ../
+-rw-r--r-- 1 AJ_ACER 197121 0 Jul  9 23:46 index.html
+-rw-r--r-- 1 AJ_ACER 197121 0 Jul  9 23:46 index.htmls
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed
+        ../gitone/
+        ./
+        ../testone.txt
+        ../testtwo.txt
+
+nothing added to commit but untracked files present (use "git a
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git commit -m "add index file"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../gitone/
+        ./
+        ../testone.txt
+        ../testtwo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git init
+Initialized empty Git repository in C:/Projects/Git/gittwo/.git/
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        index.htmls
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        index.htmls
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git add index.html
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.htmls
+
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git commit -m "adding index file"
+[master (root-commit) 6f1fe3a] adding index file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.htmls
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch
+* master
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.htmls
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.htmls
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git add index.html
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git commit -m "updated code for index file"
+[master dbc680b] updated code for index file
+ 1 file changed, 11 insertions(+)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch
+* master
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch
+  master
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (aad)
+$ git branch
+* master
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch new-branch-one
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch
+* master
+  new-branch-one
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git checkout new-branch-one
+Switched to branch 'new-branch-one'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (new-branch-one)
+$ git branch
+  master
+* new-branch-one
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (new-branch-one)
+$ git checkout master
+Switched to branch 'master'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.htmls
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git commit -m "updated code for index file"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.htmls
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.htmls
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch
+* master
+  new-branch-one
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git checkout new-branch-one
+Switched to branch 'new-branch-one'
+A       index.htmls
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (new-branch-one)
+$ git status
+On branch new-branch-one
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.htmls
+
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (new-branch-one)
+$ git branch
+  master
+* new-branch-one
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (new-branch-one)
+$ git branch nav-bar
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (new-branch-one)
+$ git checkout nav-bar
+Switched to branch 'nav-bar'
+A       index.htmls
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git branch
+  master
+* nav-bar
+  new-branch-one
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git status
+On branch nav-bar
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.htmls
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        nav-bar.html
+
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git status
+On branch nav-bar
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.htmls
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        nav-bar.html
+
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git add nav-bar.html
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git status
+On branch nav-bar
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.htmls
+        new file:   nav-bar.html
+
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git commit -m "add navbar to code"
+[nav-bar 7336361] add navbar to code
+ 2 files changed, 7 insertions(+)
+ create mode 100644 index.htmls
+ create mode 100644 nav-bar.html
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git status
+On branch nav-bar
+nothing to commit, working tree clean
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git checkout master
+Switched to branch 'master'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ touch hero.html
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hero.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git add hero.html
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hero.html
+
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git commit -m "add hero section"
+[master 4f8b702] add hero section
+ 1 file changed, 6 insertions(+)
+ create mode 100644 hero.html
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git checkout nav-bar
+Switched to branch 'nav-bar'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git checkout master
+Switched to branch 'master'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git checkout nav-bar
+Switched to branch 'nav-bar'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git checkout master
+Switched to branch 'master'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git checkout master
+Already on 'master'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git checkout nav-bar
+Switched to branch 'nav-bar'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git checkout master
+Switched to branch 'master'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch
+* master
+  nav-bar
+  new-branch-one
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git checkout master
+Already on 'master'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git checkout nav-bar
+Switched to branch 'nav-bar'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git checkout master
+Switched to branch 'master'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git log --oneline
+4f8b702 (HEAD -> master) add hero section
+dbc680b (new-branch-one) updated code for index file
+6f1fe3a adding index file
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git checkout nav-bar
+Switched to branch 'nav-bar'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git log --oneline
+7336361 (HEAD -> nav-bar) add navbar to code
+dbc680b (new-branch-one) updated code for index file
+6f1fe3a adding index file
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git branch
+  master
+* nav-bar
+  new-branch-one
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (nav-bar)
+$ git checkout master
+Switched to branch 'master'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch
+* master
+  nav-bar
+  new-branch-one
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git merge nav-bar
+Merge made by the 'ort' strategy.
+ index.htmls  | 0
+ nav-bar.html | 7 +++++++
+ 2 files changed, 7 insertions(+)
+ create mode 100644 index.htmls
+ create mode 100644 nav-bar.html
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git merge nav-bar -m "merging nav-bar to master"
+
+Already up to date.
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git log --oneline
+79cb221 (HEAD -> master) Merge branch 'nav-bar'
+4f8b702 add hero section
+7336361 (nav-bar) add navbar to code
+dbc680b (new-branch-one) updated code for index file
+6f1fe3a adding index file
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch
+* master
+  nav-bar
+  new-branch-one
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch
+* master
+  nav-bar
+  new-branch-one
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch -d new-branch-one
+Deleted branch new-branch-one (was dbc680b).
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch
+* master
+  nav-bar
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git checkout -b footer
+Switched to a new branch 'footer'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (footer)
+$ git branch
+* footer
+  master
+  nav-bar
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (footer)
+$ git add footer.html
+fatal: pathspec 'footer.html' did not match any files
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (footer)
+$ git status
+On branch footer
+nothing to commit, working tree clean
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (footer)
+$ git commit -m "add footer file to code base"
+On branch footer
+nothing to commit, working tree clean
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (footer)
+$ git status
+On branch footer
+nothing to commit, working tree clean
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (footer)
+$ git commit -m "add footer file to code base"
+On branch footer
+nothing to commit, working tree clean
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (footer)
+$ git branch -d nav-bar
+Deleted branch nav-bar (was 7336361).
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (footer)
+$ git checkout master
+Switched to branch 'master'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git merge footer
+Already up to date.
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch
+  footer
+* master
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$  git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git add index.html
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git commit -m "add footer in index file"
+[master 9b7c55a] add footer in index file
+ 1 file changed, 2 insertions(+)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch
+  footer
+* master
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git checkout footer
+Switched to branch 'footer'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (footer)
+$ git add index.html
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (footer)
+$ git commit -m "update index with footer file"
+[footer a54b356] update index with footer file
+ 1 file changed, 2 insertions(+)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (footer)
+$ git checkout master
+Switched to branch 'master'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git checkout footer
+Switched to branch 'footer'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (footer)
+$ git branch
+* footer
+  master
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (footer)
+$ git checkout master
+Switched to branch 'master'
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git merge footer
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master|MERGING)
+$ git add .
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master|MERGING)
+$ git commit -m "merged footer bar"
+[master 19a14a5] merged footer bar
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch -d footer
+Deleted branch footer (was a54b356).
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git branch
+* master
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ ^[[200~
+bash: $'\E[200~': command not found
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git log > log.txt
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ ls
+hero.html  index.html  index.htmls  log.txt  nav-bar.html
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$
+AJlsCER@AJ MINGW64 /c/projects/git/gittwo (master)
+  git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ lp file.txt
+bash: lp: command not found
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ lp file.pd
+bash: lp: command not found
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ lp file.pdf
+bash: lp: command not found
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AJ_ACER@AJ MINGW64 /c/projects/git/gittwo (master)
+$
