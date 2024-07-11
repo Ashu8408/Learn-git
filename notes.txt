@@ -1,0 +1,141 @@
+mkdir "folder1", "folder2", "folder3"
+creates new folders
+
+---git init---
+The git init command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository.
+
+---vim---
+nightmare for new users
+how to exit:
+esc>:wq enter
+
+---to unstage a file---
+git rm --cached <file>
+
+git config --global "code --wait"
+changes default editor to VSCode
+(waits for some time untill window is closed)
+
+add ".gitignore" named file in the folder and simply write the name of the files or things you want to be ignored 
+
+there are many .gitignore generator webisites for coders
+
+git commit -m "your comments"
+(commit history goes in head in .git folder)
+
+git commit -am "your comments" (performs both add and commit together)
+
+---git branch---
+creates new branches (like new timeline in marvel TVA)
+it gives the name of branch you are on
+
+git branch "new branch name"
+creates a branch with that name
+
+git checkout "branch name" or git switch "branch name"
+moves to that branch name
+
+head points to where a branch currently at
+
+--Merging branch--
+go to the master branch or the parent branch then merge
+git merge "branch-name" -m "comment"
+
+git branch -d "branch name"
+deletes the branch (history of branch deleted after work is completed)
+
+---git diff---
+***
+compare working with staging of same file, comparison between how the file looks between two branches, comparison between the two commits of same file, 
+How to read diff:
+- a->file & b->file2  (same file over time(named as file 2 because of updation on file 1 over time))
+-  ---file1
+-  +++ file2 {these indicates change in file}
+changes in lines and little preview of it
+
+commands:
+git diff --staged
+git diff commit-id1 commit-id2
+git diff commit-id1..commit-id2
+
+git diff commit-id2..commit-id1
+this inverts the depiction in terminal
+
+git diff branch-one branch-two
+git diff branch-on..branch-two
+
+---git stash---
+
+create a repo, work and commit on main 
+switch on another branch and work
+stash is like temporary shelf to keep my changes there and move to different branch
+**conflicting changes do now allow to change the branch, without commits
+**stash can work from any other branch too
+
+git stash (keeps my changes in a shelf)
+git stash pop (brings back changes from shelf)
+git stash list (gives the name of the stashes)
+git stash apply "stash{2}" (apply changes and keeps them in stash)(command to chose the stash from the list)
+
+git checkout <Hash> (detach head): new branch
+git switch main (re-attach head)
+git checkout HEAD~2 (looks 2 commit prior)
+git restore filename (gets back to one last commit version)
+
+to move back to latest:
+git checkout master (git checkout HEAD doesn't work)
+
+
+**git reflog (takes head back to where you were)
+
+git merge main
+
+**---git rebase---**
+(be careful and cautious)
+alternative to merging
+clean up tool (cleans up commits)(rewriting the history)(unlike merging it somewhats creates a single branch including all nodes)
+**never run on master branch (usually meant to run on side branches)
+
+git rebase "branch name"
+if there is conflict in file, try to remove them manually.
+go to the editor and select the changes you want to keep
+
+git rebase --continue
+
+----Entering github----
+generate key and setup the same in github account
+---GitHub summary---
+
+--remote--
+
+git remote -v (tells if there is a remote repository setup or not!!)
+git remote add "name" "URL"  (git remote add origin <URL>)
+git remote rename "old name" "new name" (renaming)
+git remote remove "name"
+
+
+** git push -u origin main  (-u setups an upstream that allows you to run future command)
+git push  (it pushes the code directly to github)
+git push -f origin main (forcefully pushes to the repository)
+
+git push <remote> <branch>
+git push origin main
+git push <remote>
+
+git clone <repo URL>  (copies and downloads the repo in local dir)
+
+
+---difference between pull and fetch and clone---
+git fetch brings the info but don't puts things in my work area
+git pull assumes you have local repo and brings all the information in my work area
+git clone assumes you don't have anything so it brings a complete copy to your local machine
+
+git clone: Downloads the entire repository, including all branches, tags, and history.
+git pull: Only fetches and merges the latest changes from the specified branch.
+
+git pull = git fetch + git merge
+
+git pull origin main (changes will be merged to the main branch)
+
+**codespace opens up like golang space etc
+
