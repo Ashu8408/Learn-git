@@ -139,3 +139,14 @@ git pull origin main (changes will be merged to the main branch)
 
 **codespace opens up like golang space etc
 
+---git remote---
+it allows to add, manage and remove  references to remote repos
+
+git remote -v  (to see the URLs of remote repos active)
+git remote add <name> <url>  (Adds a new remote repository with a specified name and URL.)
+git
+
+
+
+---Pull request---
+
